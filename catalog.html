@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог CoffeeMania</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container_1">
+        <a href="index.html" class="logo">CoffeeMania</a>
+        <nav class="nav">
+            <button class="burger" aria-label="Меню">☰</button>
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">Главная</a></li>
+                <li><a href="catalog.html" class="nav-link active">Каталог</a></li>
+                <li><a href="blog.html" class="nav-link">Блог</a></li>
+                <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="header-extra">
+            <input type="search" placeholder="Поиск..." class="search">
+            <a href="#" class="cart">Корзина <span class="cart-count">0</span></a>
+        </div>
+        </div>
+    </header>
+
+    <main>
+    <div class="container">
+
+        <h1>Каталог товаров</h1>
+        <div class="catalog-layout">
+            <aside class="aside">
+                <h3>Категории</h3>
+                <a href="#" data-filter="all" class="active">Все товары</a>
+                <a href="#" data-filter="coffee">Кофе</a>
+                <a href="#" data-filter="black-tea">Черный чай</a>
+                <a href="#" data-filter="green-tea">Зеленый чай</a>
+                <a href="#" data-filter="teaware">Заварники</a>
+                <a href="#" data-filter="accessories">Аксессуары</a>
+            </aside>
+            <section class="catalog-grid">
+                <article class="card" data-name="Эрл Грей" data-category="green-tea" >
+                    <img src="./img/Эрл Грей.jpg" alt="Кофе">
+                    <h3>Эрл Грей</h3>
+                    <p>Вес: 250г</p>
+                    <p class="price">750 ₽</p>
+                    <button class="btn add-to-cart" data-product="Эрл Грей" data-price="750">В корзину</button>
+                </article>
+                <article class="card" data-name="Дарджилинг" data-category="black-tea">
+                    <img src="./img/Дарджилинг.jpg" alt="Дарджилинг">
+                    <h3>Дарджилинг</h3>
+                    <p>Вес: 100г</p>
+                    <p class="price">320 ₽</p>
+                    <button class="btn add-to-cart" data-product="Дарджилинг" data-price="320">В корзину</button>
+                </article>
+                <article class="card" data-name="Супремо" data-category="coffee">
+                    <img src="./img/Супремо.jpg" alt="Супремо">
+                    <h3>Супремо</h3>
+                    <p>Вес: 150г</p>
+                    <p class="price">290 ₽</p>
+                    <button class="btn add-to-cart" data-product="Супремо" data-price="290">В корзину</button>
+                </article>
+                <article class="card" data-name="Стеклянный заварник" data-category="teaware">
+                    <img src="./img/Заварник 600мл.jpg" alt="Стеклянный заварник">
+                    <h3>Стеклянный заварник</h3>
+                    <p>Объем: 400мл</p>
+                    <p class="price">850 ₽</p>
+                    <button class="btn add-to-cart" data-product="Стеклянный заварник" data-price="850">В корзину</button>
+                </article>
+                <article class="card" data-name="Турка" data-category="accessories">
+                    <img src="./img/Турка.jpg" alt="Турка">
+                    <h3>Турка</h3>
+                    <p>Объем: 300мл</p>
+                    <p class="price">340 ₽</p>
+                    <button class="btn add-to-cart" data-product="Турка" data-price="340">В корзину</button>
+                </article>
+                <article class="card" data-name="Френч-пресс" data-category="teaware">
+                    <img src="./img/Френч-пресс.jpg" alt="Френч-пресс">
+                    <h3>Френч-пресс</h3>
+                    <p> Объем: 600 мл</p>
+                    <p class="price">920 ₽</p>
+                    <button class="btn add-to-cart" data-product="Френч-пресс" data-price="920">В корзину</button>
+                </article>
+            </section>
+        </div>
+
+        <div id="brewingTips" class="brewing-tips hidden">
+            <h3>Рекомендации по завариванию и использованию</h3>
+            <p id="tipsText">Выберите товар, чтобы увидеть советы по приготовлению.</p>
+        </div>
+
+
+    </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container_footer_grid">
+            <div class="footer-info"><span class="current-year"></span> CoffeeMania Роман</div>
+            <div class="footer-links">
+                <a href="index.html">Главная</a><a href="catalog.html">Каталог</a><a href="blog.html">Блог</a><a href="contacts.html">Контакты</a>
+            </div>
+            <div class="socials"><a href="#">ВКонтакте</a></div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно корзины -->
+    <div class="modal-overlay cart-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="modal-title">Корзина</h3>
+                <button class="modal-close" aria-label="Закрыть">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="cart-items">
+                    <div class="cart-empty">Корзина пуста</div>
+                </div>
+                <div class="cart-total">
+                    <span>Итого:</span>
+                    <span class="cart-total-price">0 ₽</span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn checkout-btn" style="width: 100%;">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно уведомления -->
+    <div class="modal-overlay notification-modal">
+        <div class="modal">
+            <div class="modal-body">
+                <h3 class="modal-title" style="margin-bottom: 1rem;">Уведомление</h3>
+                <p class="notification-message">Спасибо за заказ! Мы свяжемся с вами в течение 10 минут.</p>
+                <button class="btn modal-close-notification">Закрыть</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

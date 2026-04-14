@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Главная CoffeeMania</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container_1">
+        <a href="index.html" class="logo">CoffeeMania</a>
+        <nav class="nav">
+            <button class="burger" aria-label="Меню">☰</button>
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link active">Главная</a></li>
+                <li><a href="catalog.html" class="nav-link">Каталог</a></li>
+                <li><a href="blog.html" class="nav-link">Блог</a></li>
+                <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="header-extra">
+            <input type="search" placeholder="Поиск..." class="search">
+            <a href="#" class="cart">Корзина <span class="cart-count">0</span></a>
+        </div>
+        </div>
+    </header>
+
+
+    <main>
+    <div class="container">
+        <section class="hero">
+            <h1>Искусство кофе и чая</h1>
+            <p>Только натуральный кофе и чай</p>
+            <a href="catalog.html" class="btn">Перейти в каталог</a>
+        </section>
+
+        <section>
+            <h2>Почему выбирают нас</h2>
+            <div class="grid-cards">
+                <div class="benefit-card"><h3>Натуральный состав</h3><p>Только сертифицированные натуральные товары.</p></div>
+                <div class="benefit-card"><h3>Быстрая доставка</h3><p>Привозим заказы в день оформления.</p></div>
+                <div class="benefit-card"><h3>Честная цена</h3><p>Работаем напрямую с фермерами без наценок.</p></div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Популярные товары</h2>
+            <div class="grid-cards">
+                <article class="card">
+                    <img src="./img/Эфиопия Иргачиффе.jpg" alt="Эрл Грей">
+                    <h3>Эфиопия Иргачиффе</h3>
+                    <p class="price">450 ₽</p>
+                    <div class="card-actions">
+                        
+                        <button class="btn add-to-cart BIG" data-product="Чай Эрл Грей" data-price="450">В корзину</button>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="./img/Эрл Грей.jpg" alt="Кофе Арабика">
+                    <h3>Эрл Грей</h3>
+                    <p class="price">890 ₽</p>
+                    <div class="card-actions">
+                        <a href="product.html" class="btn ">Подробнее</a>
+                        <button class="btn add-to-cart" data-product="Кофе Арабика" data-price="890">В корзину</button>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="./img/Заварник 600мл.jpg" alt="Заварник">
+                    <h3>Медный заварник</h3>
+                    <p class="price">650 ₽</p>
+                    <div class="card-actions">
+
+                        <button class="btn add-to-cart BIG" data-product="Бамбуковая кружка" data-price="650">В корзину</button>
+                    </div>
+                </article>
+            </div>
+            <div class="text-center mt-1">
+                <a href="catalog.html" class="btn">Смотреть больше</a>
+            </div>
+        </section>
+
+        <section id="calculator" class="section">
+            <h2>Калькулятор крепости напитка</h2>
+            <div class="calc-container">
+                <div class="calc-row">
+                    <label for="beanType">Сорт зёрен:</label>
+                    <select id="beanType">
+                        <option value="30">Арабика (мягкий)</option>
+                        <option value="50">Робуста (крепкий)</option>
+                        <option value="40">Смесь 50/50</option>
+                    </select>
+                </div>
+                <div class="calc-row">
+                    <label for="grindSize">Помол:</label>
+                    <select id="grindSize">
+                        <option value="-10">Крупный</option>
+                        <option value="0">Средний</option>
+                        <option value="10">Мелкий</option>
+                        <option value="20">В пыль</option>
+                    </select>
+                </div>
+                <div class="strength-meter">
+                    <div id="strengthBar"></div>
+                </div>
+                <p id="strengthText">Крепость: 30%</p>
+            </div>
+        </section>
+        
+        <section class="newsletter-section">
+            <h2>Подпишитесь на рассылку и получите скидку 10%</h2>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Ваш email" class="newsletter-input" required>
+                <button type="submit" class="btn">Подписаться</button>
+            </form>
+        </section>
+    </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container_footer_grid">
+            <div class="footer-info"><span class="current-year"></span> CoffeeMania Роман</div>
+            <div class="footer-links">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="blog.html">Блог</a>
+                <a href="contacts.html">Контакты</a>
+            </div>
+            <div class="socials">
+                <a href="#">ВКонтакте</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Окно корзины -->
+    <div class="modal-overlay cart-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="modal-title">Корзина</h3>
+                <button class="modal-close" aria-label="Закрыть">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="cart-items">
+                    <div class="cart-empty">Корзина пуста</div>
+                </div>
+                <div class="cart-total">
+                    <span>Итого:</span>
+                    <span class="cart-total-price">0 ₽</span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn checkout-btn" style="width: 100%;">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно уведомления -->
+    <div class="modal-overlay notification-modal">
+        <div class="modal">
+            <div class="modal-body">
+                <h3 class="modal-title" style="margin-bottom: 1rem;">Уведомление</h3>
+                <p class="notification-message">Спасибо за заказ! Мы свяжемся с вами в течение 10 минут.</p>
+                <button class="btn modal-close-notification">Закрыть</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

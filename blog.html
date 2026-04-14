@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог CoffeeMania</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container_1">
+        <a href="index.html" class="logo">CoffeeMania</a>
+        <nav class="nav">
+            <button class="burger" aria-label="Меню">☰</button>
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">Главная</a></li>
+                <li><a href="catalog.html" class="nav-link">Каталог</a></li>
+                <li><a href="blog.html" class="nav-link active">Блог</a></li>
+                <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="header-extra">
+            <input type="search" placeholder="Поиск..." class="search">
+            <a href="#" class="cart">Корзина <span class="cart-count">0</span></a>
+        </div>
+        </div>
+    </header>
+
+    <main>
+    <div class="container">
+        <h1>Блог о правильном употреблении кофе и чая</h1>
+        <div class="blog-grid">
+            <article class="card">
+                <img src="./img/Заварка кофе.jpg" alt="Статья">
+                <h3>Как правильно заваривать кофе дома</h3>
+                <p class="blog-meta">05.04.2026</p>
+                <p>Простые правила для идеального напитка без кофемашины.</p>
+                <a href="article.html" class="btn btn-outline mt-1">Читать далее</a>
+            </article>
+            <article class="card">
+                <img src="./img/Заварка зел чая.jpg" alt="Статья">
+                <h3>Польза зеленого чая для иммунитета</h3>
+                <p class="blog-meta">01.04.2026</p>
+                <p>Почему стоит включить зеленый чай в ежедневный рацион.</p>
+                <a href="./articl.html" class="btn btn-outline mt-1">Читать далее</a>
+            </article>
+            <article class="card">
+                <img src="./img/Хранение чая.jpg" alt="Статья">
+                <h3>5 ошибок при хранении чая</h3>
+                <p class="blog-meta">20.03.2026</p>
+                <p>Как сохранить аромат и полезные свойства вашего чая.</p>
+                <a href="article.html" class="btn btn-outline mt-1">Читать далее</a>
+            </article>
+        </div>
+    </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container_footer_grid">
+            <div class="footer-info"><span class="current-year"></span> CoffeeMania Роман</div>
+            <div class="footer-links"><a href="index.html">Главная</a><a href="catalog.html">Каталог</a><a href="blog.html">Блог</a><a href="contacts.html">Контакты</a></div>
+            <div class="socials"><a href="#">ВКонтакте</a></div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно корзины -->
+    <div class="modal-overlay cart-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="modal-title">Корзина</h3>
+                <button class="modal-close" aria-label="Закрыть">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="cart-items">
+                    <div class="cart-empty">Корзина пуста</div>
+                </div>
+                <div class="cart-total">
+                    <span>Итого:</span>
+                    <span class="cart-total-price">0 ₽</span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn checkout-btn" style="width: 100%;">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно уведомления -->
+    <div class="modal-overlay notification-modal">
+        <div class="modal">
+            <div class="modal-body">
+                <h3 class="modal-title" style="margin-bottom: 1rem;">Уведомление</h3>
+                <p class="notification-message">Спасибо за заказ! Мы свяжемся с вами в течение 10 минут.</p>
+                <button class="btn modal-close-notification">Закрыть</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
